@@ -220,22 +220,22 @@ router.delete("/:id", async (req, res) => {
   }
 });
 
-// METHOD   : GET
-// ROUTE    : /
-// FUNCTION : get sorted by created at index
-router.get("/", async (req, res) => {
-  try {
-    //Find and sort applications by creation date
-    const applications = await Application.find().sort([["createdAt", -1]]);
-    const lastApplication = applications[0];
+// // METHOD   : GET
+// // ROUTE    : /
+// // FUNCTION : get sorted by created at index
+// router.get("/", async (req, res) => {
+//   try {
+//     //Find and sort applications by creation date
+//     const applications = await Application.find().sort([["createdAt", -1]]);
+//     const lastApplication = applications[0];
 
-    res.send(lastApplication);
-  } catch (error) {
-    res.status(400).json({
-      msg: error.message,
-    });
-  }
-});
+//     res.send(lastApplication);
+//   } catch (error) {
+//     res.status(400).json({
+//       msg: error.message,
+//     });
+//   }
+// });
 
 module.exports = router;
 /*////////////////////////////////////////////////////////////////////////////////////*/
