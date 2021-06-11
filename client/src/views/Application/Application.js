@@ -23,7 +23,7 @@ export default function Application({ application, idx, deleteApplication }) {
     <div key={application._id} className="Application">
       <div id="application-container">
         <div id="title-container">
-          <div className="idx-num">{idx}</div>
+          <div className="idx-num">{idx + 1}</div>
           <div className="title-wrapper">
             {/* COMPANY NAME */}
             <h4 htmlFor="companyName">Company:</h4>
@@ -41,7 +41,6 @@ export default function Application({ application, idx, deleteApplication }) {
             }}
           >
             {isOpen ? "▲" : "▼"}
-            {/* {isOpen ? "△" : "▽"} */}
           </button>
         </div>
         {isOpen && (
@@ -53,6 +52,7 @@ export default function Application({ application, idx, deleteApplication }) {
                 {application.businessType}
               </p>
             </div>
+
             {/* COMPANY TYPE */}
             <div className="item-wrapper companyType">
               <h4 htmlFor="companyType">Type: </h4>
@@ -68,6 +68,7 @@ export default function Application({ application, idx, deleteApplication }) {
                 {application.jobTitle}
               </p>
             </div>
+
             {/* WEBSITE */}
             <div className="item-wrapper website">
               <h4 htmlFor="website">Website: </h4>
@@ -75,6 +76,7 @@ export default function Application({ application, idx, deleteApplication }) {
                 <a href={application.website}>Link</a>
               </p>
             </div>
+
             {/* APPLICATION URL */}
             <div className="item-wrapper applicationUrl">
               <h4 htmlFor="applicationUrl">Application URL: </h4>
@@ -90,6 +92,7 @@ export default function Application({ application, idx, deleteApplication }) {
                 {application.jobLocation}
               </p>
             </div>
+
             {/* APPLICATION STATUS */}
             <div className="item-wrapper applicationStatus">
               <h4 htmlFor="applicationStatus">Application Status: </h4>
@@ -99,12 +102,13 @@ export default function Application({ application, idx, deleteApplication }) {
             </div>
 
             {/* SENT? */}
-            <div className="item-wrapper applicationSent">
+            {/* <div className="item-wrapper applicationSent">
               <h4 htmlFor="applicationSent">Application Sent? </h4>
               <p id="applicationSent" name="applicationSent">
                 {application.applicationSent}
               </p>
-            </div>
+            </div> */}
+
             {/* RESPONSE? */}
             {/* <div className="item-wrapper response">
               <h4 htmlFor="response">Response? </h4>
@@ -112,6 +116,7 @@ export default function Application({ application, idx, deleteApplication }) {
                 {application.response}
               </p>
             </div> */}
+
             {/* DATE SUBMITTED */}
             <div className="item-wrapper dateSubmitted">
               <h4 htmlFor="dateSubmitted">Date Submitted: </h4>
@@ -126,27 +131,15 @@ export default function Application({ application, idx, deleteApplication }) {
               <div className="technologies" name="technologies">
                 {application.technologies.map((technology, idx) => (
                   <ul key={idx}>
-                    <li>
-                      {/* <span>&#8226;</span> {technology} */}
-                      &#8226; {technology}
-                    </li>
+                    <li>&#8226; {technology}</li>
                   </ul>
                 ))}
               </div>
             </div>
             {/* NOTES */}
-            {/* <div className="item-wrapper notes-wrapper"> */}
             <div className="notes-wrapper">
-              {/* <center> */}
               <h4 htmlFor="notes">Notes: </h4>
-              {/* </center> */}
-              <textarea
-                id="notes"
-                className="text-notes"
-                name="notes"
-                role="textbox"
-                readOnly
-              >
+              <textarea id="notes" className="text-notes" name="notes" readOnly>
                 {application.notes}
               </textarea>
             </div>

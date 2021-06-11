@@ -55,9 +55,9 @@
   display: flex;
   flex-direction: column;
   padding: 0.5rem;
+  padding: 3vmin 5vmin;
   margin: 0.5rem 0px;
   margin-top: 0px;
-  /* background-color: transparent; */
   border: 4px solid #141204;
   border-top: 0px;
 
@@ -145,12 +145,13 @@ div#title-container > div.title-wrapper > p {
 }
 
 #wrapper > div.item-wrapper > h4 {
-  padding: 0px 10vmin;
   padding-right: 2vmin;
+  padding-left: 3vmin;
 }
 #wrapper > div.item-wrapper > p {
   padding: 0px 10vmin;
   padding-left: 2vmin;
+  padding-right: 3vmin;
 }
 #wrapper > div.item-wrapper > p > a:hover {
   color: #246eb9;
