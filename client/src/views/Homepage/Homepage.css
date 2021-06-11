@@ -1,0 +1,56 @@
+.Homepage {
+  width: 100%;
+  height: 100%;
+}
+.Homepage h1 {
+  width: 100%;
+  height: 12vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #141204;
+  color: #faf7f1;
+}
+/*
+.Homepage {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-color: bisque;
+}
+.App-header {
+  background-color: bisque;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  font-size: calc(20px + 2vmax);
+  color: #282c33;
+}
+
+nav {
+  background-color: #282c33;
+  color: floralwhite;
+  font-size: calc(10px + 2vmin);
+}
+nav > ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+}
+li > a {
+  color: inherit;
+  text-decoration: inherit;
+}
+.add-new {
+  border: 1px solid gainsboro;
+  border-radius: 4px;
+  padding: 10px;
+  color: #ff6700;
+  color: floralwhite;
+}
+*/
