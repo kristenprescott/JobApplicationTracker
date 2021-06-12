@@ -177,6 +177,7 @@ export default function ApplicationForm({
                 <option value="">----- Select -----</option>
                 <option value="Corporation">Corporation</option>
                 <option value="Recruiter">Recruiter</option>
+                <option value="Startup">Startup</option>
                 <option value="Other">Other</option>
               </select>
             </div>
