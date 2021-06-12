@@ -4,6 +4,7 @@ import { useHistory } from "react-router-dom";
 
 export default function Application({ application, idx, deleteApplication }) {
   const history = useHistory();
+  const [issent, setIsSent] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [isEdit, setIsEdit] = useState(true);
 
@@ -22,16 +23,44 @@ export default function Application({ application, idx, deleteApplication }) {
   return (
     <div key={application._id} className="Application">
       <div id="application-container">
-        <div id="title-container">
-          <div className="idx-num">{idx + 1}</div>
-          <div className="title-wrapper">
-            {/* COMPANY NAME */}
-            <h4 htmlFor="companyName">Company:</h4>
-            <p id="companyName" className="companyName" name="companyName">
-              {application.companyName}
-            </p>
+        {application.applicationSent ? (
+          <div
+            id="title-container"
+            style={{
+              color: "#faf7f1",
+              backgroundColor: "#ff6347",
+            }}
+          >
+            <div
+              style={{
+                color: "#faf7f1",
+                border: "1px solid #faf7f1",
+                backgroundColor: "#246eb9",
+              }}
+              className="idx-num"
+            >
+              {idx + 1}
+            </div>
+            <div className="title-wrapper">
+              {/* COMPANY NAME */}
+              <h4 htmlFor="companyName">Company:</h4>
+              <p id="companyName" className="companyName" name="companyName">
+                {application.companyName}
+              </p>
+            </div>
           </div>
-        </div>
+        ) : (
+          <div id="title-container">
+            <div className="idx-num">{idx + 1}</div>
+            <div className="title-wrapper">
+              {/* COMPANY NAME */}
+              <h4 htmlFor="companyName">Company:</h4>
+              <p id="companyName" className="companyName" name="companyName">
+                {application.companyName}
+              </p>
+            </div>
+          </div>
+        )}
 
         <div className="moreLessBtn-wrapper">
           <button
@@ -88,6 +117,11 @@ export default function Application({ application, idx, deleteApplication }) {
             {/* LOCATION */}
             <div className="item-wrapper jobLocation">
               <h4 htmlFor="jobLocation">Location: </h4>
+              {application.remote ? (
+                <span>{application.remote.toString()}</span>
+              ) : (
+                <span style={{ display: "none" }}></span>
+              )}
               <p id="jobLocation" name="jobLocation">
                 {application.jobLocation}
               </p>
@@ -105,17 +139,17 @@ export default function Application({ application, idx, deleteApplication }) {
             {/* <div className="item-wrapper applicationSent">
               <h4 htmlFor="applicationSent">Application Sent? </h4>
               <p id="applicationSent" name="applicationSent">
-                {application.applicationSent}
+                {application.applicationSent.toString()}
               </p>
             </div> */}
 
             {/* RESPONSE? */}
-            {/* <div className="item-wrapper response">
+            <div className="item-wrapper response">
               <h4 htmlFor="response">Response? </h4>
               <p id="response" name="response">
-                {application.response}
+                {application.response.toString()}
               </p>
-            </div> */}
+            </div>
 
             {/* DATE SUBMITTED */}
             <div className="item-wrapper dateSubmitted">
@@ -131,7 +165,10 @@ export default function Application({ application, idx, deleteApplication }) {
               <div className="technologies" name="technologies">
                 {application.technologies.map((technology, idx) => (
                   <ul key={idx}>
-                    <li>&#8226; {technology}</li>
+                    <li>
+                      {" "}
+                      <span>&#8226;</span> {technology}
+                    </li>
                   </ul>
                 ))}
               </div>

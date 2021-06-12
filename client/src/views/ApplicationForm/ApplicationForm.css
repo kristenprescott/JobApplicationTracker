@@ -136,7 +136,7 @@ div.notes > textarea {
   resize: none;
   overflow: auto;
 
-  white-space: pre;
+  white-space: pre-wrap;
 }
 
 .back-btn,

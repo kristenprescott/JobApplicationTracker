@@ -170,14 +170,23 @@ div#title-container > div.title-wrapper > p {
 }
 div.technologies {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  text-align: center;
 }
 div.technologies > ul {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
   padding: 0px 0.5rem;
 }
-
+div.technologies > ul > li {
+  padding: 0.5rem;
+  max-width: 15vmin;
+  min-height: 5vmin;
+  height: auto;
+  width: auto;
+}
 #wrapper > div.notes-wrapper {
   padding: 1rem;
   padding-left: 1.2rem;

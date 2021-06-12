@@ -112,6 +112,7 @@ export default function ApplicationForm({
     // responseCheckbox.current.checked = false;
     remoteCheckbox.current.checked = false;
     // notes.current.value = newApplication.notes.value;
+    console.log("App data: ", newApplication);
   };
 
   return (
@@ -286,7 +287,7 @@ export default function ApplicationForm({
                     onChange={handleChange}
                   >
                     <option value="">----- Select -----</option>
-                    {/* <option value="sent">Sent/Waiting for response</option> */}
+                    <option value="sent">Sent/Waiting for response</option>
                     <option value="phoneScreening">Phone Screening</option>
                     <option value="hiringTask">Hiring Task</option>
                     <option value="onsiteInterview">Onsite Interview</option>
