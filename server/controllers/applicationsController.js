@@ -20,22 +20,6 @@ const Application = require("../models/Application");
 */
 
 // METHOD  : GET
-// ROUTE   : /applications
-// FUNCTION: Get all applications(sorted by createdAt, starting at -1)
-// router.get("/", async (req, res) => {
-//   try {
-//     //Find and sort applications by creation date
-//     const applications = await Application.find({}).sort([["createdAt", -1]]);
-
-//     res.send(applications);
-//   } catch (error) {
-//     res.status(400).json({
-//       msg: error.message,
-//     });
-//   }
-// });
-
-// METHOD  : GET
 // ROUTE   : /
 // FUNCTION: Get all applications
 router.get("/", async (req, res) => {
@@ -71,27 +55,6 @@ router.post("/", async (req, res) => {
     });
   }
 });
-
-// METHOD  : POST
-// ROUTE   : /new
-// FUNCTION: Add a new application
-// router.post("/new", async (req, res) => {
-//   try {
-//     const application = await Application.create({
-//       companyName: req.body.companyName,
-//       jobTitle: req.body.jobTitle,
-//       jobLocation: req.body.jobLocation,
-//       createdAt: Date.now(),
-//     });
-
-//     await application.save();
-//     res.send(application);
-//   } catch (error) {
-//     res.status(400).json({
-//       msg: error.message,
-//     });
-//   }
-// });
 
 // METHOD  : GET
 // ROUTE   : /:id
@@ -170,26 +133,6 @@ router.patch("/:id", async (req, res) => {
 // METHOD  : PUT
 // ROUTE   : /:id
 // FUNCTION: Update the application
-// router.put("/:id", async (req, res) => {
-//   try {
-//     const application = await Application.findByIdAndUpdate(
-//       { _id: req.params.id },
-//       { companyName: req.body.companyName },
-//       { new: true }
-//     );
-//     await application.save();
-
-//     res.send(application);
-//   } catch (error) {
-//     res.status(400).json({
-//       msg: error.message,
-//     });
-//   }
-// });
-
-// METHOD  : PUT
-// ROUTE   : /:id
-// FUNCTION: Update the application
 router.put("/:id", async (req, res) => {
   try {
     const updatedApplication = await Application.findByIdAndUpdate(
@@ -219,23 +162,6 @@ router.delete("/:id", async (req, res) => {
     });
   }
 });
-
-// // METHOD   : GET
-// // ROUTE    : /
-// // FUNCTION : get sorted by created at index
-// router.get("/", async (req, res) => {
-//   try {
-//     //Find and sort applications by creation date
-//     const applications = await Application.find().sort([["createdAt", -1]]);
-//     const lastApplication = applications[0];
-
-//     res.send(lastApplication);
-//   } catch (error) {
-//     res.status(400).json({
-//       msg: error.message,
-//     });
-//   }
-// });
 
 module.exports = router;
 /*////////////////////////////////////////////////////////////////////////////////////*/
