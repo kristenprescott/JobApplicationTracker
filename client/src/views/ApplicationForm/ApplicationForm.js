@@ -289,6 +289,7 @@ export default function ApplicationForm({
                   >
                     <option value="">----- Select -----</option>
                     <option value="sent">Sent/Waiting for response</option>
+                    <option value="sent">Interview Prep!</option>
                     <option value="phoneScreening">Phone Screening</option>
                     <option value="hiringTask">Hiring Task</option>
                     <option value="onsiteInterview">Onsite Interview</option>
