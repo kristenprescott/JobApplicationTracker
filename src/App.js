@@ -1,7 +1,7 @@
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Homepage from "./views/Homepage/Homepage";
-import ApplicationsList from "./views/ApplicationsList/ApplicationsList";
+// import ApplicationsList from "./views/ApplicationsList/ApplicationsList";
 import Edit from "./views/Edit";
 import Add from "./views/Add";
 
@@ -27,7 +27,7 @@ function App() {
       <Switch>
         <Route path="/" exact component={Homepage} />
 
-        <Route path="/applications" component={ApplicationsList} />
+        {/* <Route path="/applications" component={ApplicationsList} /> */}
 
         <Route path="/new" component={Add} />
 

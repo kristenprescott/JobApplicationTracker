@@ -32,7 +32,7 @@ export default function ApplicationForm({
   const [newApplication, setNewApplication] = useState(initialState);
   const sentCheckbox = useRef(null);
   const remoteCheckbox = useRef(null);
-  const notes = useRef("");
+  // const notes = useRef("");
 
   const handleClick = (e) => {
     setNewApplication({

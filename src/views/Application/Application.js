@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 
 export default function Application({ application, idx, deleteApplication }) {
   const history = useHistory();
-  const [issent, setIsSent] = useState(false);
+  // const [issent, setIsSent] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [isEdit, setIsEdit] = useState(true);
 
