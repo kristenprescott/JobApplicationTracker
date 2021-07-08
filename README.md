@@ -2,6 +2,8 @@
 
 # Job Application Tracker
 
+Full CRUD Job Application Tracker - keeps track of the status and details of sent applications. Made using React & MongoDB/Node.js/Express.
+
 </div>
 
 <div align="center">
