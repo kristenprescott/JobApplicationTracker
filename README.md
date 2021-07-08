@@ -6,7 +6,7 @@
 
 <div align="center">
 
-[Demo](https://kristenprescott.github.io/JobApplicationTracker/)
+[Demo](https://jobapptracker.netlify.app/)
 
 </div>
 
