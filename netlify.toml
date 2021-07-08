@@ -1,5 +1,5 @@
 [build]
-    base = "/"
+    base = "/public/index.html"
     publish = "build/"
     command = "npm run build"
 
