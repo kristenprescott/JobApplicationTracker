@@ -6,9 +6,7 @@
 
 <div align="center">
 
-## Demo
-
-[Live Demo](https://kristenprescott.github.io/JobApplicationTracker/)
+[Demo](https://kristenprescott.github.io/JobApplicationTracker/)
 
 </div>
 
