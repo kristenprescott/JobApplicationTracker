@@ -8,13 +8,17 @@ const Add = () => {
     console.log("I am subitting this applicton to Add:");
     console.log(application);
     try {
-      const res = await fetch("http://localhost:8080/applications", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(application),
-      });
+      // const res = await fetch("http://localhost:8080/applications", {
+      const res = await fetch(
+        `${process.env.REACT_APP_SERVER_URL}/applications`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(application),
+        }
+      );
       const data = await res.json();
       console.log("Added data", data);
       history.push("/applications");
