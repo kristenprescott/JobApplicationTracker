@@ -1,17 +1,15 @@
 [build]
-    # base = "/"
+    base = "/"
     publish = "build"
     command = "npm run build"
 
-# # The following redirect is intended for use with most SPAs that handle
-# # routing internally.
-# [[redirects]]
-#   from = "/*"
-#   to = "/index.html"
-#   status = 200
-#   # By default, redirects won’t be applied if there’s a file with the same
-#   # path as the one defined in the `from` property. Setting `force` to `true`
-#   # will make the redirect rule take precedence over any existing files.
-#   force = true
-
-
+# The following redirect is intended for use with most SPAs that handle
+# routing internally.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  # By default, redirects won’t be applied if there’s a file with the same
+  # path as the one defined in the `from` property. Setting `force` to `true`
+  # will make the redirect rule take precedence over any existing files.
+  force = true
