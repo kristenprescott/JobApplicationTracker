@@ -1,15 +1,32 @@
 [build]
-    command = "npm run build"
-    base = ""
-    publish = "/build"
+#   base = "client"
+  publish = "build"
+  command = "yarn build"
 
-# The following redirect is intended for use with most SPAs that handle
-# routing internally.
+# The following redirect is intended for use with most SPAs that handle routing internally.
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-  # By default, redirects won’t be applied if there’s a file with the same
-  # path as the one defined in the `from` property. Setting `force` to `true`
-  # will make the redirect rule take precedence over any existing files.
-  force = true
+  force = false
+# [build]
+#     # command = "npm run build"
+#     # base = "./"
+#     publish = "./build"
+
+# # The following redirect is intended for use with most SPAs that handle
+# # routing internally.
+# [[redirects]]
+#   from = "/*"
+#   to = "/index.html"
+#   status = 200
+#   force = true
+# #   query = {path = ":path"} # apply this rule for /?path=example
+# #   headers = {X-From = "Netlify"}
+
+# # Redirect for api:
+# [[redirects]]
+#   from = "/api/*"
+#   to = "https://api.example.com/:splat"
+#   status = 200
+#   force = true
