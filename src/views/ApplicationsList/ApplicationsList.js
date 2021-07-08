@@ -18,7 +18,7 @@ export default function ApplicationList() {
         console.log("Initial data: ", data);
         setApplications(data);
       } catch (error) {
-        console.log("Error: ");
+        console.log("Error: ", error);
         // console.error(error);
       }
     })();
