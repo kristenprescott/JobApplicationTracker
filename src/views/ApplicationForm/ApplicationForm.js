@@ -31,12 +31,10 @@ export default function ApplicationForm({
   const [technology, setTechnology] = useState("");
   const [newApplication, setNewApplication] = useState(initialState);
   const sentCheckbox = useRef(null);
-  // const responseCheckbox = useRef(null);
   const remoteCheckbox = useRef(null);
   const notes = useRef("");
 
   const handleClick = (e) => {
-    // console.log("Technology ", e.target.value, " added.");
     setNewApplication({
       ...newApplication,
       technologies: [...newApplication.technologies, technology],
@@ -46,7 +44,6 @@ export default function ApplicationForm({
 
   const handleChange = (e) => {
     setNewApplication({ ...newApplication, [e.target.name]: e.target.value });
-    // console.log(`${e.target.name}: ${e.target.value}`);
   };
 
   const handleChangeTechnology = (e) => {
@@ -57,14 +54,7 @@ export default function ApplicationForm({
     setIsSent(!isSent);
     const checkedValue = sentCheckbox.current.checked;
     setNewApplication({ ...newApplication, applicationSent: checkedValue });
-    // console.log("sent? ", checkedValue);
   };
-
-  // const handleResponseCheckBox = () => {
-  //   const responseValue = responseCheckbox.current.checked;
-  //   setNewApplication({ ...newApplication, response: responseValue });
-  //   console.log("response? ", responseValue);
-  // };
 
   const handleRemoteCheckBox = () => {
     setIsRemote(!isRemote);
@@ -75,12 +65,9 @@ export default function ApplicationForm({
   };
 
   const handleRemoveTechnology = (technology, idx) => {
-    // console.log(technology, idx);
-    // console.log(newApplication.technologies[idx]);
     const result = newApplication.technologies.filter(
       (tech) => tech !== technology
     );
-    // console.log("result: ", result);
     setNewApplication({
       ...newApplication,
       technologies: result,
@@ -109,17 +96,13 @@ export default function ApplicationForm({
       technologies: [],
     });
     sentCheckbox.current.checked = false;
-    // responseCheckbox.current.checked = false;
     remoteCheckbox.current.checked = false;
-    // notes.current.value = newApplication.notes.value;
     console.log("App data: ", newApplication);
   };
 
   return (
     <div className="ApplicationsForm">
-      {/* <h1>Job Application Tracker</h1> */}
       <div className="application-title">
-        {/* <div className="back-btn-wrapper"> */}
         <button
           className="back-btn"
           onClick={() => {
@@ -127,9 +110,7 @@ export default function ApplicationForm({
           }}
         >
           ⇦ Back
-          {/* <span>⇦ Back</span> */}
         </button>
-        {/* </div> */}
         <h2>Application: </h2>
       </div>
       {/* {history.location.state.isEdit && history.location.state.isEdit ? (
@@ -295,24 +276,8 @@ export default function ApplicationForm({
                     <option value="onsiteInterview">Onsite Interview</option>
                     <option value="offer">Offer</option>
                     <option value="rejected">Rejected</option>
-                    {/* <option value="unsent">Unsent</option> */}
                   </select>
                 </div>
-
-                {/* RESPONSE CHECKBOX */}
-                {/* <div className="input-wrapper response bool-wrapper">
-                <label htmlFor="response">Application response?</label>
-                <div className="checkbox-wrapper">
-                  <input
-                    type="checkbox"
-                    ref={responseCheckbox}
-                    id="response"
-                    name="response"
-                    value={newApplication.response}
-                    onChange={handleResponseCheckBox}
-                  />
-                </div>
-              </div> */}
               </>
             ) : (
               <div style={{ display: "none" }}></div>
@@ -372,11 +337,6 @@ export default function ApplicationForm({
                 onKeyUp={(e) => {
                   if (e.keyCode === 13) {
                     console.log("• Enter key pressed!");
-
-                    // • = &#2022;
-                    // • = &#8226;
-                    // ◦ = &#9702;
-                    // ‣ = &#8227;
                   }
                 }}
               />

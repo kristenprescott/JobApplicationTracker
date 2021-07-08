@@ -57,7 +57,6 @@ export default function ApplicationList() {
   return (
     <div className="ApplicationsList">
       <h2>Applications:</h2>
-      {/* <div> */}
       <button
         className="btn add-new-btn"
         onClick={() => {
@@ -66,9 +65,6 @@ export default function ApplicationList() {
       >
         Add New
       </button>
-      {/* </div> */}
-      {/* <div className="applications-container"> */}
-      {/* <div className="applications" style={{ width: "800px" }}> */}
       <div>
         {applications.map((application, idx) => (
           <Application
@@ -78,7 +74,6 @@ export default function ApplicationList() {
           />
         ))}
       </div>
-      {/* </div> */}
     </div>
   );
 }
