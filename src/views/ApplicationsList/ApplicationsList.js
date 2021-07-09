@@ -30,6 +30,7 @@ export default function ApplicationList() {
         {
           method: "GET",
           headers: {
+            "Access-Control-Allow-Origin": "*",
             "Content-Type": "application/json",
           },
         }
@@ -48,6 +49,7 @@ export default function ApplicationList() {
         {
           method: "DELETE",
           headers: {
+            "Access-Control-Allow-Origin": "*",
             "Content-Type": "application/json",
           },
         }

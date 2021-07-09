@@ -15,6 +15,7 @@ const Edit = () => {
         {
           method: "PUT",
           headers: {
+            "Access-Control-Allow-Origin": "*",
             "Content-Type": "application/json",
           },
           body: JSON.stringify(application),
