@@ -11,7 +11,6 @@ const Edit = () => {
 
     try {
       const res = await fetch(
-        // `http://localhost:8080/applications/${application._id}`,
         `${process.env.REACT_APP_SERVER_URL}/applications/${application._id}`,
         {
           method: "PUT",

@@ -10,7 +10,6 @@ export default function ApplicationList() {
   useEffect(() => {
     (async () => {
       try {
-        // const res = await fetch("http://localhost:8080/applications");
         const res = await fetch(
           `${process.env.REACT_APP_SERVER_URL}/applications`
         );
@@ -26,7 +25,6 @@ export default function ApplicationList() {
 
   const getApplications = async () => {
     try {
-      // const response = await fetch("http://localhost:8080/applications/", {
       const response = await fetch(
         `${process.env.REACT_APP_SERVER_URL}/applications`,
         {
@@ -45,7 +43,6 @@ export default function ApplicationList() {
 
   const deleteApplication = async (e, id) => {
     try {
-      // const res = await fetch(`http://localhost:8080/applications/${id}`, {
       const res = await fetch(
         `${process.env.REACT_APP_SERVER_URL}/applications/${id}`,
         {

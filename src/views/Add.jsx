@@ -8,7 +8,6 @@ const Add = () => {
     console.log("I am subitting this applicton to Add:");
     console.log(application);
     try {
-      // const res = await fetch("http://localhost:8080/applications", {
       const res = await fetch(
         `${process.env.REACT_APP_SERVER_URL}/applications`,
         {
